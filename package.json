@@ -1,9 +1,9 @@
 {
   "name": "Black White WebSite",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A example to showcase designed responsive Page using Bootstrap",
   "main": "index.html",
-  "repository": "",
+  "repository": "https://github.com/tamsamani/black_white_website.git/'",
   "author": "Tamsamani <tamsmoha@gmail.com>",
   "dependencies": {
   }

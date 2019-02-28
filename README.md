@@ -12,3 +12,8 @@ This project is an example showcases for designed reponsive(& static) Web Page.
 
 
 *All Associated images by this project are only for test propose.*
+
+
+## Releases
+
+-0.1.2 change fonts, make images box more responsive with mobile and desktop with smart positioning
