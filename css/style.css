@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed');
+
+#main-page {
+    padding: 0;
+}
+.edge {
+    border-radius: 0 !important;
+}
+.ellipse {
+    border-radius: 50px !important;
+}
+
+.paved {
+    /*padding : 2em !important;*/
+    position: relative;
+    background-color: #aaa;
+    overflow: hidden;
+    min-height: 300px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    color : white;
+    transition: 0.8s;
+}
+
+.paved > img {
+    position: absolute;
+    width: 100%;
+    top : 0;
+    height: 100%;
+    filter: brightness(0.45) blur(2px);
+    transition: 0.9s;
+    transform: scale(1.1);
+}
+
+.paved > .overview {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: justify;
+    height: auto;
+    padding: 1em;
+    position: relative;
+    top: 0;
+}
+
+.paved > .overview > .btn {
+    padding-left : 1.5em;
+    padding-right : 1.5em;
+    background-color: var(--dark, #333);
+}
+
+.paved:hover > .overview > .btn {
+    background-color: var(--white, #eee);
+    color: var(--dark, #333);
+}
+
+.paved.centered > .overview {
+    width: 100%;
+    text-align: center;
+}
+
+
+.paved > .overview > .title {
+    
+    padding: 1em;
+    margin-left: -1em;
+}
+.paved.centered > .overview > .title {
+    padding: 0.25em;
+    margin: auto;
+}
+
+.paved > .overview > .subtitle {
+    margin-left: 0.5em;
+}
+
+.paved > .overview > .source {
+    border-top : solid 1px;
+    padding-top: 0.5em;
+    margin-left: 1em;
+}
+
+.paved:hover {
+    color : #000;
+}
+.paved:hover > .overview {
+    
+    text-shadow: 0 0 4px #FFF, 0 1px 3px #FFF, 1px 0 3px #FFF;
+}
+
+.paved:hover > img {
+    filter: brightness(0.95) blur(0);
+    transform: scale(1);
+}
+
+.topic {
+    
+    margin: 2em 8% !important; /* make it very wide in desktop, & vice-versa with mobile */
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+}
+
+.topic > .topic-header {
+    padding: 0;
+    border-top : solid 1px #ccc;
+    position: relative;
+    color : #666;
+    text-transform: uppercase;
+}
+
+.topic > .topic-header > span {
+    font-weight: 900;
+    display: inline-block;
+    padding: 1em 0;
+    border-top : solid 1px;
+}
+
+.topic > .topic-item {
+    padding: 2em 0;
+}
+
+.topic > .topic-item.right > .row {
+    flex-direction : row-reverse;
+}
+
+.topic .group-list > .order {
+    width: 1em;
+    /* height: 1em; */
+    border: solid 1px #BDBDBD;
+    border-radius: 50%;
+    /* font-size: 1em; */
+    text-indent: .25em;
+    line-height: 1;
+    padding: .75em;
+    box-sizing: unset;
+}
+
+.side {
+    background: #EEEEEE;
+    /*min-height: -webkit-fill-available !important;*/
+}
+
+.box {
+  background : grey;
+  /* no mod */
+  --box-size: 100px;
+  --box-ratio: 1;
+  
+  position: relative;
+  width: var(--box-size);
+  overflow: hidden;
+}
+
+.box::before {
+  content: "";
+  display: block;
+  padding-top: calc(var(--box-ratio) * 100%);/* read comments in JS box) */
+}
+
+.box-content {
+  height: 100%;
+  /* centring content of box related to width */
+  transform: translate(calc(
+      (-50% + var(--box-size)/2) * (var(--box-ratio) + 2 / var(--box-ratio))/2 + 100% / 8
+  ));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.box-content.fit-height {
+  height: unset;
+  width: 100%;
+  /* centring/fitting content of box related to height */
+  transform: translateY(calc(
+      (-50% + var(--box-size)/2) * (1 + 1 / var(--box-ratio))/2 
+  ));
+}
+
+.avatar {
+    position: relative;
+    z-index: 0;
+}
+.avatar > .box {
+    margin-right: 8px;
+    border-radius: 50%;
+}
+.avatar > .icon {
+    color : red;
+    font-size : 1.5em;
+    height : 1.5rem;
+    position: absolute;
+    bottom : 0;
+    right: 8px;
+}
