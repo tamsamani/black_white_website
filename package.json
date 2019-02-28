@@ -1,0 +1,10 @@
+{
+  "name": "Black White WebSite",
+  "version": "0.1.1",
+  "description": "A example to showcase designed responsive Page using Bootstrap",
+  "main": "index.html",
+  "repository": "",
+  "author": "Tamsamani <tamsmoha@gmail.com>",
+  "dependencies": {
+  }
+}
